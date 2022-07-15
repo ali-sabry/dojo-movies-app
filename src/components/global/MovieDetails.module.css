@@ -1,0 +1,156 @@
+.Details {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.Details .Back_Btn {
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 25px;
+    display: inline-block;
+    margin-bottom: 25px;
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    border-radius: 7px;
+    background-color: var(--main-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Movie_Details {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.Details .Image {
+    margin-bottom: 25px;
+    margin: auto;
+    border-radius: 7px;
+    width: 100%;
+}
+
+.Details .Image img {
+    width: 100%;
+}
+
+.Details .Info {
+    color: var(--white);
+    text-transform: capitalize;
+}
+
+.Details .Info h3 {
+    margin: 25px 0;
+}
+
+.Details .Info p {
+    line-height: 2;
+    margin-top: 25px;
+}
+
+.Details .Info p span {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.Message, .Message_NotFound {
+    color: var(--primary-color);
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    width: 30%;
+}
+
+.Message::after {
+    content: '....';
+    position: absolute;
+    top: 0;
+    left: 53%;
+    color: #ff9f00;
+    animation: bobing 1.5s ease infinite reverse;
+}
+
+@keyframes bobing {
+    0% {
+        margin-left: 53%;
+    } 
+    25% {
+        margin-left: 63%;
+    }
+    50% {
+        margin-left: 73%;
+    }
+    75% {
+        margin-left: 83%;
+    }
+    100% {
+        margin-left: 93%;
+    }
+}
+
+.Recommendations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
+    gap: 20px;
+}
+
+.Home_Heading {
+    width: 100%;
+    text-align: center; 
+    margin: 25px 0 50px;
+    text-transform: capitalize;
+    color: var(--primary-color);
+    position: relative;
+}
+
+
+
+.Home_Heading::after {
+    content: '';
+    width: 100px;
+    height: 1px;
+    position: absolute;
+    left: 50%;
+    bottom: -20%;
+    transform: translateX(-50%);
+    background-color: var(--white);
+}
+
+@media screen and (max-width: 768px)  {
+    section.Details {
+        margin-top: 135px;
+    }
+
+    .Movie_Details {
+        display: block;
+
+    }
+
+    .Recommendations {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .Recommendations div {
+        width: calc(50% - 20px);
+    }
+
+    
+    .Details .Image,
+    .Details .Info {
+
+    }
+
+    .Details .Info {
+        margin: auto;
+    }
+    .Details .Info p {
+        line-height: 1.6;
+    }
+}

@@ -1,0 +1,35 @@
+.Footer {
+    color: var(--white);
+    text-transform: capitalize;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    width: 100%;
+    position: relative;
+}
+
+.Footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.Footer span a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .Footer {
+        display: none !important;
+    }
+}

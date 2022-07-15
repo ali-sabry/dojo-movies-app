@@ -1,0 +1,274 @@
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 35px;
+    text-transform: capitalize !important;
+}
+
+.nav .NavbarSearch {
+    display: grid;
+    grid-template-areas: 'brand input input input input input input button button';
+    width: 100%;
+    align-items: center;
+}
+
+.nav .NavbarSearch .Brand {
+    grid-area: brand;
+    text-align: center;
+    color: var(--white);
+    display: flex;
+}
+
+.nav .NavbarSearch .Brand h1 {
+    margin: 0;
+    letter-spacing: 0.23em;
+    font-family: cursive;
+}
+
+.nav .NavbarSearch .Brand h1 a {
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    transition: color .3s ease;
+}
+.nav .NavbarSearch .Brand h1 a:hover {
+    color: var(--primary-color)
+}
+.NavbarSearch .input {
+    grid-area: input;
+    outline: none;
+    padding: 7px 10px;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: transparent;
+    border: 2px solid rgb(151, 147, 147);
+    border-radius: 7px;
+    color: var(--white);
+    accent-color: var(--white);
+    width: 95%;
+    box-shadow: 0 0 40px rgba(0, 0, 0, .1);
+}
+
+.NavbarSearch .input:focus {
+    border-color: var(--main-color);
+}
+
+.NavbarSearch .input::placeholder {
+    color: var(--white);
+    letter-spacing: 2px;
+    opacity: 1;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+}
+
+.NavbarSearch .input:focus::placeholder {
+    opacity: 0;
+}
+
+.NavbarSearch .SearchBtn {
+    grid-area: button;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 7px 15px;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 25px;
+    letter-spacing: 2px;
+    border-radius: 7px;
+    text-transform: capitalize;
+    transition: .3s ease;
+}
+
+.NavbarSearch .SearchBtn:hover {
+    background-color: var(--main-color);
+}
+
+.nav .NavLinks {
+    width: 100%;
+    padding: 15px 0;
+    margin-bottom: 15px;
+}
+
+.nav .NavLinks ul {
+    list-style-type: none;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .NavLinks ul li {
+    display: inline-block;
+    font-size: 20px;
+}
+
+.nav .NavLinks ul li a {
+    padding: 7px 15px;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    transition: .3s ease;
+    display: flex;
+    align-items: center;
+}
+.nav .NavLinks ul li a svg {
+    padding-left: 3px;
+}
+
+.nav .NavLinks ul li:last-child {
+    position: relative;
+}
+
+.nav .NavLinks ul li .badge {
+    padding: 1px 10px;
+    background-color: var(--main-color);
+    color: var(--white);
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    top: -30px;
+    right: 10px;
+}
+
+.nav .NavLinks ul li .badge::after {
+    content: '';
+    position: absolute;
+    top: 88%;
+    right: 2px;
+    border-width: 13px;
+    border-style: solid;
+    border-color: var(--main-color) transparent transparent transparent;
+    z-index: -1;
+}
+
+.nav .NavLinks ul li a:hover {
+    color: var(--primary-color);
+}
+
+.nav .NavLinks ul li .active {
+    color: var(--primary-color);
+    text-shadow: 0px 0px 10px var(--primary-color);
+}
+
+.nav .Mode {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.nav .Mode h4 {
+    cursor: pointer;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-bottom: 25px;
+        background: var(--black);
+        z-index: 1000;
+        padding: 10px 20px;
+    }
+
+    .nav .NavbarSearch {
+        display: block;
+    }
+
+    .nav .NavbarSearch .Brand {
+        display: block;
+        width: 100%;
+    }
+
+    .nav .NavbarSearch .Brand a {
+        display: inline-block !important;
+    }
+
+    .nav .NavbarSearch .input {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+    .nav .NavbarSearch .SearchBtn {
+        display: block;
+        width: 100%;
+        padding: 7px;
+        font-size: 18px;
+    }
+
+    .nav .NavbarSearch .input::placeholder {
+        font-size: 10px;
+    }
+
+    .nav .NavLinks {
+        position: fixed;
+        bottom: -3px;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        margin: 0;
+        background-color: var(--black);
+        border-top: 2px solid var(--main-color);
+    }
+
+    .nav .NavLinks ul {
+        display: flex;
+        flex-wrap: nowrap;
+        user-select: none;
+        cursor: grab;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 70%;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    
+    nav .NavLinks ul::-webkit-scrollbar {
+        height: 5px;
+    }
+    
+    nav .NavLinks ul::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: var(--main-color);
+    }
+
+    .nav .NavLinks ul li a {
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        font-size: 11px;
+        cursor: grab;
+    }
+
+    .nav .NavLinks ul li a svg {
+        font-size: 15px;
+    }
+
+    .nav .NavLinks ul li:last-child .badge {
+        padding: 0px 4px;
+        background-color: var(--main-color);
+        color: var(--white);
+        text-align: center;
+        display: inline-block;
+        position: absolute;
+        top: 3px;
+        right: 3px;
+    }
+    
+    .nav .NavLinks ul li .badge::after {
+       display: none;
+    }
+}

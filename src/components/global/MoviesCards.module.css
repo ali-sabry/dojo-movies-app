@@ -1,0 +1,154 @@
+
+.movie_card, .customCard {
+    border-radius: 7px;
+    overflow: hidden;
+    height: auto;
+    box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+}
+
+.customCard {
+    height: 100%;
+}
+
+.movie_media {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    color: var(--white);
+    transition: .3s ease-in-out;
+}
+
+.movie_media::after {
+    content: 'Loading...';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    font-size: 30px;
+    font-weight: bold;
+    width: fit-content;
+    height: fit-content;
+}
+
+.customCard .movie_media {
+    height: 100%;
+}
+
+.customCard .movie_media::after {
+    content: '';
+}
+
+.movie_media .Message {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.movie_media .overlay, .customCard .overlay {
+    transition: .3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 100;
+    opacity: 0;
+}
+
+.movie_media .overlay a, .customCard .overlay a {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    text-transform: capitalize;
+    background-color: var(--main-color);
+    color: var(--white);
+    font-weight: bold;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+}
+
+.customCard .overlay {
+    opacity: 1;
+}
+
+.movie_media img {
+    transition: .3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+}
+
+.movie_media:hover img {
+    transform: scale(1.1, 1.1);
+}
+.movie_media:hover .overlay {
+    opacity: 1;
+}
+
+.movie_details {
+    padding: 25px 0;
+    text-transform: capitalize;
+    position: relative;
+    background-color: var(--black);
+}
+
+.movie_details p {
+    color: var(--primary-color);
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+}
+
+.movie_details p span {
+    color: var(--white);
+    display: inline-block;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.movie_details button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0 5px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    width: fit-content;
+}
+
+.movie_details button svg {
+    font-size: 25px;
+}
+
+.movie_details button path {
+    stroke: var(--white);
+}
+
+.Active_Icon path {
+ stroke: var(--main-color) !important;
+ fill: var(--main-color);
+}
+

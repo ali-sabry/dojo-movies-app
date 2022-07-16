@@ -28,8 +28,6 @@ const MoviesCards = ({ movies, voted = 'true', other }) => {
         };
     };
     
-    console.log(DarkStatus[0].IsDark);
-
     return (
     <div className={classes.movie_card} style={{ boxShadow: DarkStatus[0].IsDark ?'0 0 20px rgb(255 255 255 / 34%)' :'0 0 20px rgb(0 0 0 / 50%)' }}>
         <div className={classes.movie_media}>
@@ -45,7 +43,9 @@ const MoviesCards = ({ movies, voted = 'true', other }) => {
                 <img src={movies.poster_path === null ?`https://via.placeholder.com/600` :`https://image.tmdb.org/t/p/w500/${movies.poster_path}`} alt={movies.title} height={movies.poster_path === null?'530': 'auto'} loading='lazy'  />
             </div>
         <div className={classes.movie_details}>
-            <p>Title: <span>{movies.title}</span></p>
+                <p>Title:  <NavLink to={`/Details/${movies.id}`} onClick={()=> window.scrollTo(0, 0)}>
+                            <span>{movies.title}</span> </NavLink>
+                </p>
             {
             voted === 'true' ? <p>Vote Average : <span>{movies.vote_average}</span></p>
             : false

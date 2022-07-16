@@ -8,15 +8,12 @@ const CustomCard = ({pagePath}) => {
   return (
     <div className={classes.customCard}>
       <div className={classes.movie_media}>
-      <div className={classes.overlay}>
-        <NavLink to={pagePath}>
-          <FaLink />  more movies
-        </NavLink>
+        <div className={classes.overlay}>
+          <NavLink to={pagePath}>
+            <FaLink />  more movies
+          </NavLink>
+        </div>
       </div>
-      </div>
-      {/* <div className={classes.movie_details}>
-        <p>test pargraoh</p>
-      </div> */}
     </div>
   )
 }

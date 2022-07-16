@@ -16,6 +16,7 @@ const PopularMovies = ()=> {
             </>
         )
     }
+    
     if(IsError) {
         return (
             <>

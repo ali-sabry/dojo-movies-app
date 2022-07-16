@@ -2,7 +2,7 @@
 	Dojo Movies 🎬 App
 
 # Demo link
- Preview App Demo [Dojo_Movies_App](https://google.com)
+ Preview App Demo [Dojo_Movies_App](https://dojomovies.netlify.app/)
 
 ## Table of Content: 📑
 - [Project Name](#project-name)
@@ -28,7 +28,11 @@ movie story and save your favorite movie to favorite page, change between light 
 
 ## Screenshots: 📷
 
-<img src="https://envri.eu/wp-content/uploads/2016/08/software-developer-copy.jpg" width="50" alt="screenshot" />
+|  Desktop   | Mobile  |
+| ------------- | ---------- |
+|  <img src="src/assets/screen_one.png"  alt="screenshot" /> | <img src="src/assets/screen_three.png"  alt="screenshot" />  
+|  <img src="src/assets/screen_two.png"  alt="screenshot" />  |  <img src="src/assets/screen_four.png"  alt="screenshot" />
+
 .
 
 ## Technologies & Languages:  ☕️ 🐍 ⚛️🧪📲

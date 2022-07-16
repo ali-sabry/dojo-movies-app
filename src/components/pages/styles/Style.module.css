@@ -31,25 +31,6 @@
 }
 
 
-
-@media screen and (max-width: 576px) {
-    .Home_Heading {
-        margin: 0 0 25px;
-    }
-
-    .Popular_Movies, .Upcoming_Movies,
-    .Toprated_Movies, .Trending_Movies, .Favorites,
-    .Target_Search_Movies {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
-        gap: 35px 10px;
-    }
-
-    .MainMarginTop {
-        margin-top: 135px;
-    }
-}
-
 .Home_Heading::after {
     content: '';
     width: 100px;
@@ -89,6 +70,13 @@
     display: none;
 }
 
+.wrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @keyframes bobing {
     0% {
         margin-left: 53%;
@@ -126,6 +114,28 @@
 @media screen and (max-width: 768px) {
     body {
         padding-top: 50px;
+    } 
+}
+
+@media screen and (max-width: 576px) {
+    .Home_Heading {
+        margin: 0 0 25px;
     }
-    
+
+    .Popular_Movies, .Upcoming_Movies,
+    .Toprated_Movies, .Trending_Movies, .Favorites,
+    .Target_Search_Movies {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(164px, 1fr));
+        gap: 35px 10px;
+    }
+
+    .MainMarginTop {
+        margin-top: 135px;
+    }
+
+    .Message {
+        margin-top: 150px !important;
+
+    }
 }

@@ -258,14 +258,14 @@
     }
 
     .nav .NavLinks ul li:last-child .badge {
-        padding: 0px 4px;
+        padding: 2px 8px;
         background-color: var(--main-color);
         color: var(--white);
         text-align: center;
         display: inline-block;
         position: absolute;
         top: 3px;
-        right: 3px;
+        right: -3px;
     }
     
     .nav .NavLinks ul li .badge::after {

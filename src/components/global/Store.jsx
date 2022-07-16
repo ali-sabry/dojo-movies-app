@@ -2,7 +2,6 @@ import React, { createContext, useState, useEffect } from 'react';
 
 const FavoritesContext = createContext({
     Favorites: [],
-    TotalFavorites: 0,
     AddFavorites: (FavoriteMovies)=> {},
     RemoveFavorite: (MovieId)=> {},
     ItemIsFavorite: (MovieId)=> {},
@@ -40,7 +39,7 @@ const FavoritesHandlerProvider = ({ children }) => {
     
     const context = {
         Favorites: FavoritesContent,
-        TotalFavorites: FavoritesContent.length > 0 ?FavoritesContent.length :0 , 
+        TotalItems: FavoritesContent === (null || '') ?0 :FavoritesContent.length, 
         AddFavorites,
         RemoveFavorite,
         ItemIsFavorite,

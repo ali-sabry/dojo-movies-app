@@ -3,8 +3,8 @@ import React from 'react';
 import classes from './styles/Style.module.css';
 
 import useFetchingApi from '../global/FetchingApi';
-import MoviesCards from '../global/MoviesCards';
-import CustomCard from '../global/CustomCard';
+// import MoviesCards from '../global/MoviesCards';
+// import CustomCard from '../global/CustomCard';
 
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';

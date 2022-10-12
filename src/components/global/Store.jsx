@@ -39,7 +39,7 @@ const FavoritesHandlerProvider = ({ children }) => {
     
     const context = {
         Favorites: FavoritesContent,
-        TotalItems: FavoritesContent.length, 
+        TotalItems: FavoritesContent === (null || '') ?0 :FavoritesContent.length, 
         AddFavorites,
         RemoveFavorite,
         ItemIsFavorite,

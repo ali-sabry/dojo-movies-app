@@ -1,81 +1,70 @@
-# Project Name
-	Dojo Movies 🎬 App
+# Getting Started with Create React App
 
-# Demo link
- Preview App Demo [Dojo_Movies_App](https://dojomovies.netlify.app/)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Table of Content: 📑
-  -
-	- [About The App: 📚](#about-the-app-)
-	- [Screenshots: 📷](#screenshots-)
-	- [Technologies & Languages:  ☕️ 🐍 ⚛️🧪📲](#technologies--languages--️--️)
-	- [Approach: 🚶](#approach-)
-	- [Some challenges when i code this app:](#some-challenges-when-i-code-this-app)
-		- [1- localStorage:](#1--localstorage)
-		- [2- Custom hook:](#2--custom-hook)
-	- [Credits Contributors images: 📝](#credits-contributors-images-)
-	- [how to contribute :  💻](#how-to-contribute--)
+## Available Scripts
 
-## About The App: 📚
+In the project directory, you can run:
 
-**Dojo Movies App** Is a delightful app for movie lovers where you can know about upcoming, trending, and most popular Movies.
+### `npm start`
 
-movie story and save your favorite movie to favorite page, change between light & dark mode.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Screenshots: 📷
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-|  Desktop   | Mobile  |
-| ------------- | ---------- |
-|  <img src="src/assets/screen_one.png"  alt="screenshot" /> | <img src="src/assets/screen_three.png"  alt="screenshot" />  
-|  <img src="src/assets/screen_two.png"  alt="screenshot" />  |  <img src="src/assets/screen_four.png"  alt="screenshot" />
+### `npm test`
 
-.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Technologies & Languages:  ☕️ 🐍 ⚛️🧪📲
-- html
-- css
-- react
-- react icons
-- react splide
-- react router
+### `npm run build`
 
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Approach: 🚶
- I tried to implement most of react features like:
-	
-> react-router | nested-router | react hooks | react-context | use-location | Custom Hook | and more ...
-	
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Some challenges when i code this app:
- 
-  ### 1- localStorage: 
- 
-   I wanted to save dark mode status & save favorites 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-`localStorage.setItem("test");`
+### `npm run eject`
 
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-  ### 2- Custom hook:
-  I wanted to fetch diffrent resources 			like ( Trending | Popular | etc... ) 		movies.
- - So I created custom hook [ useFetching ] helped me to fetch diffrent urls across the app.( Appling DRY (don't repeat your self) concept )
- - ` using 👉	const { Data, isLoading, isError } = useFetching( url ) .`
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-## Credits contributors images: 📝
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
->![GitHub Contributors Image](https://contrib.rocks/image?repo=ali-sabry/inbio-portfolio)
+## Learn More
 
-## How to contribute:  💻
-	- download or clone the repository
-	- run npm install
-	- npm start	
-	- start fix issues or add some features
-	- write clear commits describe all your changes
-	- save all your changes 
-	- pull your changes
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
+To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Code Splitting
 
-## License ©️
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-All Copyright Save To   [**Ali Sabry**](https://www.linkedin.com/in/ali-sabry/)
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -50,7 +50,7 @@ const Home = ()=> {
                 } 
             }}>
                 {
-                    console.log(Movies)
+                    !IsLoading && console.log(Movies)
                     // Movies && (
                     //     Movies.map((mv, index)=> (
                     //         index < 10 ? (
@@ -88,11 +88,14 @@ const Home = ()=> {
                             }
                         } 
                      }}>
-                {MoviesData.map( (movie, index) => (
-                    <SplideSlide key={index}>
-                        <MoviesCards movies={movie} key={index} />
-                    </SplideSlide>
-                ))}
+                {
+                    !IsLoading && console.log
+                    // MoviesData.map( (movie, index) => (
+                    // <SplideSlide key={index}>
+                    //     <MoviesCards movies={movie} key={index} />
+                    // </SplideSlide>
+                    // ))
+                }
                 </Splide>
             </div>
             <div className={classes.Popular_Slides}>

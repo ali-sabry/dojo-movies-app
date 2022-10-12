@@ -11,12 +11,13 @@ import '@splidejs/splide/dist/css/splide.min.css';
 
 const Home = ()=> {
     const url ='https://api.themoviedb.org/3/movie/now_playing';
+
     const {IsLoading, IsError, MessageError, MoviesData: NowPlaying} = useFetchingApi(url);
-    
-    const {MoviesData: Popular}  = useFetchingApi('https://api.themoviedb.org/3/movie/popular');
-    const {MoviesData: Upcoming} = useFetchingApi('https://api.themoviedb.org/3/movie/upcoming');
-    const {MoviesData: Toprated} = useFetchingApi('https://api.themoviedb.org/3/movie/top_rated');
-    const {MoviesData: Trending} = useFetchingApi('https://api.themoviedb.org/3/trending/movie/week');
+    console.log(NowPlaying);
+    // const {MoviesData: Popular}  = useFetchingApi('https://api.themoviedb.org/3/movie/popular');
+    // const {MoviesData: Upcoming} = useFetchingApi('https://api.themoviedb.org/3/movie/upcoming');
+    // const {MoviesData: Toprated} = useFetchingApi('https://api.themoviedb.org/3/movie/top_rated');
+    // const {MoviesData: Trending} = useFetchingApi('https://api.themoviedb.org/3/trending/movie/week');
     
     if(IsLoading) {
         return (
@@ -108,19 +109,19 @@ const Home = ()=> {
             </div>
             <div className={classes.Popular_Slides}>
                 <h1 className={classes.Home_Heading}>popular movies</h1>
-                <ShowData Movies={ Popular } pagePath='/Popular' />
+                {/*<ShowData Movies={ Popular } pagePath='/Popular' />*/}
             </div>
             <div className={classes.Upcoming_Slides}>
                 <h1 className={classes.Home_Heading}>upcoming movies</h1>
-                <ShowData Movies={ Upcoming } pagePath='/Upcoming' />
+                {/*<ShowData Movies={ Upcoming } pagePath='/Upcoming' />*/}
             </div>
             <div className={classes.Toprated_Slides}>
                 <h1 className={classes.Home_Heading}>Toprated movies</h1>
-                <ShowData Movies={ Toprated } pagePath='/Toprated'  />
+                {/*<ShowData Movies={ Toprated } pagePath='/Toprated'  />*/}
             </div>
             <div className={classes.Trending_Slides}>
                 <h1 className={classes.Home_Heading}>Trending movies</h1>
-                <ShowData Movies={ Trending } pagePath='/Trending'  />
+                {/*<ShowData Movies={ Trending } pagePath='/Trending'  />*/}
             </div>
         </section>
     )

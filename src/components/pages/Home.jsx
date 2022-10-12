@@ -50,7 +50,7 @@ const Home = ()=> {
                 } 
             }}>
                 {
-                    !IsLoading && console.log(Movies)
+                    console.log(Movies)
                     // Movies && (
                     //     Movies.map((mv, index)=> (
                     //         index < 10 ? (
@@ -63,7 +63,7 @@ const Home = ()=> {
                 }
                 <SplideSlide>
                 {
-                     !IsLoading && console.log(Movies)
+                     console.log(Movies)
                 }
                     {/*<CustomCard pagePath={pagePath} />*/}
                 </SplideSlide>
@@ -92,11 +92,7 @@ const Home = ()=> {
                         } 
                      }}>
                 {
-                    !IsLoading && (
-                        <>
-                            {console.log(MoviesData)}
-                        </>
-                    )
+                    console.log(MoviesData)
                     // (
                     //     MoviesData.map( (movie, index) => (
                     //         <>

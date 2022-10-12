@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import classes from './styles/Style.module.css';
 
@@ -34,7 +34,10 @@ const Home = ()=> {
         )
     };
 
-    console.log(MoviesData, Popular, Upcoming, Toprated, Trending);
+    useEffect(()=> {
+        console.log(MoviesData, Popular, Upcoming, Toprated, Trending);
+    }, []);
+
     
     return (
         <h1>home page</h1>

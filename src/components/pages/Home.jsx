@@ -50,14 +50,15 @@ const Home = ()=> {
                 } 
             }}>
                 {
-                    Movies.map((mv, index)=> (
-                        index < 10 ? (
-                            <SplideSlide key={`key_${index}`}>
-                                <MoviesCards movies={mv} />
-                            </SplideSlide>
-                        ) : false
-                    )) 
-                    
+                    Movies && (
+                        Movies.map((mv, index)=> (
+                            index < 10 ? (
+                                <SplideSlide key={`key_${index}`}>
+                                    <MoviesCards movies={mv} />
+                                </SplideSlide>
+                            ) : false
+                        )) 
+                    )
                 }
                 <SplideSlide>
                     <CustomCard pagePath={pagePath} />

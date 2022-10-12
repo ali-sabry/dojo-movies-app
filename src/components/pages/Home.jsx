@@ -90,15 +90,21 @@ const Home = ()=> {
                      }}>
                 {
                     !IsLoading && (
-                        MoviesData.map( (movie, index) => (
-                            <>
-                                {console.log(MoviesData)}
-                                <SplideSlide key={index}>
-                                    <MoviesCards movies={movie} key={index} />
-                                </SplideSlide>
-                            </>
-                        ))
+                        <>
+                            {console.log(MoviesData)}
+                            <MoviesCards />
+                        </>
                     )
+                    // (
+                    //     MoviesData.map( (movie, index) => (
+                    //         <>
+                    //             {console.log(MoviesData)}
+                    //             <SplideSlide key={index}>
+                    //                 <MoviesCards movies={movie} key={index} />
+                    //             </SplideSlide>
+                    //         </>
+                    //     ))
+                    // )
                 }
                 </Splide>
             </div>

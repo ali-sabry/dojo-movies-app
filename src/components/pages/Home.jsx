@@ -61,9 +61,12 @@ const Home = ()=> {
                     //     )) 
                     // )
                 }
-                {/*<SplideSlide>
-                    <CustomCard pagePath={pagePath} />
-                </SplideSlide>*/}
+                <SplideSlide>
+                {
+                     !IsLoading && console.log(Movies)
+                }
+                    {/*<CustomCard pagePath={pagePath} />*/}
+                </SplideSlide>
             </Splide>
         )
     };

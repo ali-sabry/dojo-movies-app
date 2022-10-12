@@ -11,7 +11,7 @@ import '@splidejs/splide/dist/css/splide.min.css';
 
 const Home = ()=> {
     const url ='https://api.themoviedb.org/3/movie/now_playing';
-    const {IsLoading, IsError, MessageError, MoviesData} = useFetchingApi(url);
+    const {IsLoading, IsError, MessageError, MoviesData: NowPlaying} = useFetchingApi(url);
     
     const {MoviesData: Popular}  = useFetchingApi('https://api.themoviedb.org/3/movie/popular');
     const {MoviesData: Upcoming} = useFetchingApi('https://api.themoviedb.org/3/movie/upcoming');
@@ -50,7 +50,7 @@ const Home = ()=> {
                 } 
             }}>
                 {
-                    console.log(Movies)
+                    console.log(NowPlaying)
                     // Movies && (
                     //     Movies.map((mv, index)=> (
                     //         index < 10 ? (
@@ -63,7 +63,7 @@ const Home = ()=> {
                 }
                 <SplideSlide>
                 {
-                     console.log(Movies)
+                     console.log(NowPlaying)
                 }
                     {/*<CustomCard pagePath={pagePath} />*/}
                 </SplideSlide>
@@ -92,7 +92,7 @@ const Home = ()=> {
                         } 
                      }}>
                 {
-                    console.log(MoviesData)
+                    console.log(NowPlaying)
                     // (
                     //     MoviesData.map( (movie, index) => (
                     //         <>

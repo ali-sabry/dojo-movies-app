@@ -50,7 +50,7 @@ const Home = ()=> {
                 } 
             }}>
                 {
-                    console.log(Movies);
+                    console.log(Movies)
                     // Movies && (
                     //     Movies.map((mv, index)=> (
                     //         index < 10 ? (

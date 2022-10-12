@@ -5,9 +5,7 @@
  Preview App Demo [Dojo_Movies_App](https://dojomovies.netlify.app/)
 
 ## Table of Content: 📑
-- [Project Name](#project-name)
-- [Demo link](#demo-link)
-	- [Table of Content: 📑](#table-of-content-)
+  -
 	- [About The App: 📚](#about-the-app-)
 	- [Screenshots: 📷](#screenshots-)
 	- [Technologies & Languages:  ☕️ 🐍 ⚛️🧪📲](#technologies--languages--️--️)
@@ -15,10 +13,8 @@
 	- [Some challenges when i code this app:](#some-challenges-when-i-code-this-app)
 		- [1- localStorage:](#1--localstorage)
 		- [2- Custom hook:](#2--custom-hook)
-	- [Status: 📶](#status-)
 	- [Credits Contributors images: 📝](#credits-contributors-images-)
-	- [Fix issues or add some features:  💻](#fix-issues-or-add-some-features--)
-	- [License ©️](#license-️)
+	- [how to contribute :  💻](#how-to-contribute--)
 
 ## About The App: 📚
 
@@ -65,11 +61,11 @@ movie story and save your favorite movie to favorite page, change between light 
  - ` using 👉	const { Data, isLoading, isError } = useFetching( url ) .`
 
 
-## Credits Contributors images: 📝
+## Credits contributors images: 📝
 
 >![GitHub Contributors Image](https://contrib.rocks/image?repo=ali-sabry/inbio-portfolio)
 
-## Fix issues or add some features:  💻
+## How to contribute:  💻
 	- download or clone the repository
 	- run npm install
 	- npm start	

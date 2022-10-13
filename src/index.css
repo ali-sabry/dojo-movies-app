@@ -58,6 +58,7 @@ button.splide__arrow--next {
 
 @media screen and (max-width: 768px) {
     body {
+        padding-top: 80px;
         padding-bottom: 50px;
     }
     button.splide__arrow {

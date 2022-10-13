@@ -1,56 +1,51 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState } from "react";
 
 const FavoritesContext = createContext({
-    Favorites: [],
-    AddFavorites: (FavoriteMovies)=> {},
-    RemoveFavorite: (MovieId)=> {},
-    ItemIsFavorite: (MovieId)=> {},
+  Favorites: [],
+  TotalFavorites: 0,
+  AddFavorites: (FavoriteMovies) => {},
+  RemoveFavorite: (MovieId) => {},
+  ItemIsFavorite: (MovieId) => {},
+  SetAllFavorites: (value)=> {},
 });
 
 const FavoritesHandlerProvider = ({ children }) => {
-    
-    const [FavoritesContent, setFavoritesContent] = useState([]);
+  const [AllFavoritesContent, setAllFavoritesContent] = useState([]);
 
-    useEffect(()=> {
-        const data = localStorage.getItem('Dojo_Movies_Data');
-        setFavoritesContent(JSON.parse(data));
-    }, []);
+  const AddFavorites = (FavoriteMovies) => {
+    setAllFavoritesContent((prevFavorites) => {
+      return prevFavorites.concat(FavoriteMovies);
+    });
+  };
 
-    useEffect(()=> {
-        localStorage.setItem('Dojo_Movies_Data', JSON.stringify(FavoritesContent));
-    }, [FavoritesContent]);
+  const RemoveFavorite = (MovieId) => {
+    setAllFavoritesContent((prevFavorites) => {
+      return prevFavorites.filter((movie) => movie.id !== MovieId);
+    });
+  };
 
-    const AddFavorites = (FavoriteMovies)=> {
-        setFavoritesContent((prevFavorites)=> {
-            return prevFavorites.concat(FavoriteMovies);
-        });
-    };
+  const ItemIsFavorite = (MovieId) => {
+    const FavStatus = AllFavoritesContent.some((movie) => movie.id === MovieId);
+    return FavStatus;
+  };
 
-    const RemoveFavorite = (MovieId)=> {
-        setFavoritesContent((prevFavorites)=> {
-            return prevFavorites.filter((movie) => movie.id !== MovieId);
-        });
-    };
+  const SetAllFavoritesHandler = (value)=> setAllFavoritesContent(value);
 
-    const ItemIsFavorite = (MovieId)=> {
-        const FavStatus = FavoritesContent.some((movie)=> movie.id === MovieId);
-        return FavStatus;
-    };
-    
-    const context = {
-        Favorites: FavoritesContent,
-        TotalItems: FavoritesContent === (null || '') ?0 :FavoritesContent.length, 
-        AddFavorites,
-        RemoveFavorite,
-        ItemIsFavorite,
-    };
+  const context = {
+    Favorites: AllFavoritesContent,
+    TotalFavorites: AllFavoritesContent.length, 
+    SetAllFavorites: SetAllFavoritesHandler,
+    AddFavorites,
+    RemoveFavorite,
+    ItemIsFavorite,
+  };
 
-    return (
-        <FavoritesContext.Provider value={context}>
-            {children}
-        </FavoritesContext.Provider>
-    )
+  return (
+    <FavoritesContext.Provider value={context}>
+      {children}
+    </FavoritesContext.Provider>
+  );
 };
 
-export {FavoritesHandlerProvider};
+export { FavoritesHandlerProvider };
 export default FavoritesContext;

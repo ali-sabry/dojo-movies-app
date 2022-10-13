@@ -42,7 +42,7 @@ const AppThemeProvider = ({ children })=> {
     };
 
     useEffect(()=> {
-        if(localStorage.getItem('DojoThemeMode') !== null || undefined) {
+        if(localStorage.getItem('DojoThemeMode')) {
             const IsDark = localStorage.getItem('DojoThemeMode') === 'false';
             setIsDark(IsDark)
         }

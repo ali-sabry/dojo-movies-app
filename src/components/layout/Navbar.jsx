@@ -65,9 +65,7 @@ const Navbar = ()=> {
                         className={({isActive}) => isActive ?classes.active :''}>
                             Favorites <FaHeart/>
                             <span className={classes.badge}>
-                                {favoriteCtx.TotalItems}
-                              {/*{localStorage.Dojo_Movies_Data !== null ?favoriteCtx.Favorites.length :0}*/}
-                                
+                                {favoriteCtx.TotalFavorites}
                             </span>
                         </NavLink>
                     </li>

@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Project Name
+	Dojo Movies App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Demo link
+ Preview App Demo [Dojo_Movies_App](https://dojomovies.netlify.app)
 
-## Available Scripts
 
-In the project directory, you can run:
+## Table of Content: 📑
 
-### `npm start`
+-	- [About The App: 📚](#about-the-app-)
+	- [Screenshots: 📷](#screenshots-)
+	- [Technologies & Languages:  ☕️ 🐍 ⚛️🧪📲](#technologies--languages--️--️)
+	- [Approach: 🚶](#approach-)
+	- [Credits Contributors images: 📝](#credits-contributors-images-)
+	- [Fix issues or add some features:  💻](#fix-issues-or-add-some-features--)
+	- [License ©️](#license-️)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About The App: 📚
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Dojo Movies App** : <br />
+Your movies on one place, are looking to see the trending movies with continuous updates movies list, are you looking about upcoming movies and want to save your next movie in wishlist page to remember it get all popular movies, are you looking for the deifies movies people's rating, are you looking to search about any movies old or new or coming you are on the right app, <br /> 
+Save your favorite movies to wishlist page, change between light & dark theme.
 
-### `npm test`
+## Screenshots: 📷
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+|  Desktop   | Mobile  |
+| ------------- | ---------- |
+|  <img src="src/assets/screen_one.png"  alt="screenshot" />  | <img src="src/assets/screen_three.png"  alt="screenshot" />  |
+|    |  <img src="src/assets/screen_four.png"  alt="screenshot" />   |
 
-### `npm run build`
+.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies & Languages:  ☕️ 🐍 ⚛️🧪📲
+- react
+- react router dom
+- the movie database
+- Splide
+- react icons
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Approach: 🚶
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Build movies app for practice on react and feching data from third party  <br />
+- I tried to implement most of react features like:
+> react-router | nested-router | react-hooks | react-context | and more ...
+	
+## Credits Contributors images: 📝
 
-### `npm run eject`
+>![GitHub Contributors Image](https://contrib.rocks/image?repo=ali-sabry/buket)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Fix issues or add some features:  💻
+	- download or clone the repository
+	- run npm install
+	- npm start	
+	- start fix issues or add some features
+	- write clear commits describe all your changes
+	- save all your changes 
+	- pull your changes
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License ©️
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+All Copyright Save To   [**Ali Sabry**](https://www.linkedin.com/in/ali-sabry/)

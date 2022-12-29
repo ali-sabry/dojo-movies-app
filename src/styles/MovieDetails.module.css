@@ -58,7 +58,8 @@
     font-size: 25px;
 }
 
-.Message, .Message_NotFound {
+.Message,
+.Message_NotFound {
     color: var(--primary-color);
     font-size: 25px;
     font-weight: bold;
@@ -78,16 +79,20 @@
 @keyframes bobing {
     0% {
         margin-left: 53%;
-    } 
+    }
+
     25% {
         margin-left: 63%;
     }
+
     50% {
         margin-left: 73%;
     }
+
     75% {
         margin-left: 83%;
     }
+
     100% {
         margin-left: 93%;
     }
@@ -95,13 +100,13 @@
 
 .Recommendations {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 20px;
 }
 
 .Home_Heading {
     width: 100%;
-    text-align: center; 
+    text-align: center;
     margin: 25px 0 50px;
     text-transform: capitalize;
     color: var(--primary-color);
@@ -121,7 +126,7 @@
     background-color: var(--white);
 }
 
-@media screen and (max-width: 768px)  {
+@media screen and (max-width: 768px) {
     section.Details {
         margin-top: 135px;
     }
@@ -141,15 +146,10 @@
         width: calc(50% - 20px);
     }
 
-    
-    .Details .Image,
-    .Details .Info {
-
-    }
-
     .Details .Info {
         margin: auto;
     }
+
     .Details .Info p {
         line-height: 1.6;
     }

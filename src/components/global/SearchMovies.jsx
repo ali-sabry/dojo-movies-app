@@ -1,12 +1,11 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, {useState, useEffect} from 'react';
-import classes from '../pages/styles/Style.module.css';
+import React, { useState, useEffect } from 'react';
+import classes from '../../styles/PagesStyles.module.css';
 import { useParams } from 'react-router-dom';
 
 import MoviesCards from './MoviesCards';
 
-const SearchMovies = ()=> {
-    const params = useParams(); 
+const SearchMovies = () => {
+    const params = useParams();
     const searchValue = params.name;
 
     const [Details, setDetails] = useState([]);
@@ -21,21 +20,23 @@ const SearchMovies = ()=> {
             const response = await theFetch.json();
             setDetails(response.results)
             setIsLoading(false)
-        } catch(error) {
+        } catch (error) {
             setIsError(true)
             setMessageError(`can't get the movies data try another search`)
         }
     }
 
-    useEffect(()=> {
+    useEffect(() => {
         FetchingDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    useEffect(()=> {
+    useEffect(() => {
         FetchingDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchValue]);
 
-    if(IsError) {
+    if (IsError) {
         return (
             <>
                 <p className={classes.Message}>{MessageError}</p>
@@ -43,10 +44,10 @@ const SearchMovies = ()=> {
         )
     }
 
-    if(IsLoading) {
-        return(
+    if (IsLoading) {
+        return (
             <>
-            <p className={classes.Message}>Loading.....</p>
+                <p className={classes.Message}>Loading.....</p>
             </>
         )
     }
@@ -54,22 +55,22 @@ const SearchMovies = ()=> {
     function otherDetails(movie) {
         return (
             <>
-            released : <span>{movie.release_date}</span>
+                released : <span>{movie.release_date}</span>
             </>
-        ) 
+        )
     }
 
     return (
         <section className={classes.Target_Search_Movies}>
-            {Details.map( (movie, index) => (
+            {Details.map((movie, index) => (
                 <MoviesCards movies={movie} other={otherDetails(movie)} voted='false' key={index} />
             ))}
-            {Details.length < 1 ?<>
+            {Details.length < 1 ? <>
                 <h1 className={classes.Message_NotFound}>movies not found</h1>
-            </> :false}
+            </> : false}
         </section>
     )
-   
+
 };
 
 export default SearchMovies;

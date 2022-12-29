@@ -1,21 +1,22 @@
-import React, { useContext, useEffect} from "react";
+import React, { useContext, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
-import classes from "./components/pages/styles/Style.module.css";
+import classes from "./styles/PagesStyles.module.css";
+
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
-import Home from "./components/pages/Home";
-import PopularMovies from "./components/pages/PopularMovies";
-import UpcomingMovies from "./components/pages/UpcomingMovies";
-import TopratedMovies from "./components/pages/TopratedMovies";
-import TrendingMovies from "./components/pages/TrendingMovies";
-import FavoritesMovies from "./components/pages/FavoritesMovies";
-import NotFound from "./components/pages/404.jsx";
+import Home from "./pages/Home";
+import PopularMovies from "./pages/PopularMovies";
+import UpcomingMovies from "./pages/UpcomingMovies";
+import TopratedMovies from "./pages/TopratedMovies";
+import TrendingMovies from "./pages/TrendingMovies";
+import FavoritesMovies from "./pages/FavoritesMovies";
+import NotFound from "./pages/404.jsx";
 
 import Details from "./components/global/TargetMovieDetails";
 import SearchMovies from "./components/global/SearchMovies";
-import Context from "./components/global/Store";
+import Context from "./store/Store";
 
 const App = () => {
   const favoritesCtx = useContext(Context);
@@ -25,6 +26,7 @@ const App = () => {
       const data = localStorage.getItem("Dojo_Movies_Data");
       favoritesCtx.SetAllFavorites(JSON.parse(data));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

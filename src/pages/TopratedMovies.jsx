@@ -1,15 +1,13 @@
 import React from 'react';
+import classes from '../styles/PagesStyles.module.css';
+import useFetchingApi from '../components/customHook/FetchingApi';
+import MoviesCards from '../components/global/MoviesCards';
 
-import classes from './styles/Style.module.css';
-
-import useFetchingApi from '../global/FetchingApi';
-import MoviesCards from '../global/MoviesCards';
-
-const TopratedMovies = ()=> {
+const TopratedMovies = () => {
     const url = 'https://api.themoviedb.org/3/movie/top_rated';
-    const {IsLoading, IsError, MessageError, MoviesData} = useFetchingApi(url);
+    const { IsLoading, IsError, MessageError, MoviesData } = useFetchingApi(url);
 
-    if(IsLoading) {
+    if (IsLoading) {
         return (
             <>
                 <p className={classes.Message}>Loading.....</p>
@@ -17,7 +15,7 @@ const TopratedMovies = ()=> {
         )
     }
 
-    if(IsError) {
+    if (IsError) {
         return (
             <>
                 <p className={classes.Message}>{MessageError}</p>
@@ -29,7 +27,7 @@ const TopratedMovies = ()=> {
         <div className={classes.MainMarginTop}>
             <h1 className={classes.Home_Heading}>toprated</h1>
             <section className={classes.Toprated_Movies}>
-                {MoviesData.map( (movie, index) => (
+                {MoviesData.map((movie, index) => (
                     <MoviesCards movies={movie} key={index} />
                 ))}
             </section>

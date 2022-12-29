@@ -2,9 +2,9 @@ import { NavLink } from 'react-router-dom';
 
 import { FaLink } from 'react-icons/fa';
 
-import classes from './MoviesCards.module.css';
+import classes from '../../styles/MoviesCards.module.css';
 
-const CustomCard = ({pagePath}) => {
+const CustomCard = ({ pagePath }) => {
   return (
     <div className={classes.customCard}>
       <div className={classes.movie_media}>

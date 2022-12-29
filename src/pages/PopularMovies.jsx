@@ -1,23 +1,21 @@
 import React from 'react';
+import classes from '../styles/PagesStyles.module.css';
+import useFetchingApi from '../components/customHook/FetchingApi';
+import MoviesCards from '../components/global/MoviesCards';
 
-import classes from './styles/Style.module.css';
+const PopularMovies = () => {
+    const url = 'https://api.themoviedb.org/3/movie/popular';
+    const { IsLoading, IsError, MessageError, MoviesData } = useFetchingApi(url);
 
-import useFetchingApi from '../global/FetchingApi';
-import MoviesCards from '../global/MoviesCards';
-
-const PopularMovies = ()=> {
-    const url ='https://api.themoviedb.org/3/movie/popular';
-    const {IsLoading, IsError, MessageError, MoviesData} = useFetchingApi(url);
-
-    if(IsLoading) {
+    if (IsLoading) {
         return (
             <>
                 <p className={classes.Message}>Loading.....</p>
             </>
         )
     }
-    
-    if(IsError) {
+
+    if (IsError) {
         return (
             <>
                 <p className={classes.Message}>{MessageError}</p>
@@ -29,8 +27,8 @@ const PopularMovies = ()=> {
         <div className={classes.MainMarginTop}>
             <h1 className={classes.Home_Heading}>popular</h1>
             <section className={classes.Popular_Movies}>
-                {MoviesData.map( (movie, index) => (
-                    <MoviesCards movies={movie} key={index}/>
+                {MoviesData.map((movie, index) => (
+                    <MoviesCards movies={movie} key={index} />
                 ))}
             </section>
         </div>

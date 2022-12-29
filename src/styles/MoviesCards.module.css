@@ -1,9 +1,9 @@
-
-.movie_card, .customCard {
+.movie_card,
+.customCard {
     border-radius: 7px;
     overflow: hidden;
     height: auto;
-    box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 .customCard {
@@ -11,7 +11,6 @@
 }
 
 .movie_media {
-    cursor: pointer;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -52,7 +51,8 @@
     font-weight: bold;
 }
 
-.movie_media .overlay, .customCard .overlay {
+.movie_media .overlay,
+.customCard .overlay {
     transition: .3s ease-in-out;
     position: absolute;
     top: 0;
@@ -64,9 +64,10 @@
     opacity: 0;
 }
 
-.movie_media .overlay a, .customCard .overlay a {
+.movie_media .overlay a,
+.customCard .overlay a {
     display: inline-block;
-    padding: 7px 11px;
+    padding: 7px;
     border-radius: 7px;
     cursor: pointer;
     text-transform: capitalize;
@@ -98,6 +99,7 @@
 .movie_media:hover img {
     transform: scale(1.1, 1.1);
 }
+
 .movie_media:hover .overlay {
     opacity: 1;
 }
@@ -148,8 +150,8 @@
 }
 
 .Active_Icon path {
- stroke: var(--main-color) !important;
- fill: var(--main-color);
+    stroke: var(--main-color) !important;
+    fill: var(--main-color);
 }
 
 

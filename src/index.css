@@ -15,14 +15,14 @@ body {
 }
 
 body::-webkit-scrollbar {
-	width: 15px;
-	background-color: black;
+    width: 15px;
+    background-color: black;
 }
 
 body::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-	background-color: var(--main-color);
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: var(--main-color);
 }
 
 button.splide__arrow {
@@ -33,13 +33,15 @@ button.splide__arrow {
 button.splide__arrow--next {
     right: -2.3em !important;
 }
+
 button.splide__arrow--prev {
     left: -2.3em !important;
 }
+
 button.splide__arrow--prev,
 button.splide__arrow--next {
     background-color: var(--main-color);
-    padding:  5px;
+    padding: 5px;
 }
 
 .splide__arrow svg {
@@ -56,27 +58,27 @@ button.splide__arrow--next {
     fill: var(--main-color);
 }
 
+.splide__track {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+}
+
 @media screen and (max-width: 768px) {
     body {
-        padding-top: 80px;
+        padding-top: 60px;
         padding-bottom: 50px;
     }
+
     button.splide__arrow {
         overflow: hidden;
         display: flex;
         align-items: center;
         justify-self: center;
-        width: 35px;
-        height: 35px;
+        width: 27px;
+        height: 27px;
     }
-    button.splide__arrow--next {
-        right: -1.5em !important;
-    }
-    button.splide__arrow--prev {
-        left: -1.5em !important;
-    }
+
     button.splide__arrow svg {
         font-size: 15px;
     }
 }
-

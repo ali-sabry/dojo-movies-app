@@ -1,0 +1,36 @@
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.head {
+    width: 100%;
+    text-align: center;
+    color: var(--white) !important;
+    margin-top: 20%;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 7px;
+    cursor: pointer;
+    text-transform: capitalize;
+    background-color: var(--main-color);
+    color: var(--white) !important;
+    text-decoration: none;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.button a {
+    display: inline-flex;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: var(--white) !important;
+}

@@ -35,9 +35,11 @@
     font-size: 25px;
 
 }
+
 .nav .NavbarSearch .Brand h1 a:hover {
     color: var(--primary-color)
 }
+
 .NavbarSearch .input {
     grid-area: input;
     outline: none;
@@ -120,6 +122,7 @@
     display: flex;
     align-items: center;
 }
+
 .nav .NavLinks ul li a svg {
     padding-left: 3px;
 }
@@ -188,34 +191,36 @@
     }
 
     .nav .NavbarSearch {
-        display: block;
+        display: flex;
+        justify-content: space-between;
     }
 
     .nav .NavbarSearch .Brand {
         display: block;
-        width: 100%;
+        width: 25%;
     }
 
     .nav .NavbarSearch .Brand a {
         display: inline-block !important;
-        font-size: 22px;
+        font-size: 20px !important;
     }
 
     .nav .NavbarSearch .input {
-        width: 100%;
+        width: 80%;
         margin: 7px 0;
         padding: 0;
     }
 
     .nav .NavbarSearch .SearchBtn {
-        display: block;
-        width: 100%;
-        padding: 7px;
-        font-size: 18px;
+        width: 20%;
+        padding: 4px 7px;
+        margin-left: 6px;
+        font-size: 16px;
     }
 
     .nav .NavbarSearch .input::placeholder {
         font-size: 10px;
+        line-height: 100%;
     }
 
     .nav .NavLinks {
@@ -240,11 +245,11 @@
         margin: auto;
         padding-bottom: 10px;
     }
-    
+
     nav .NavLinks ul::-webkit-scrollbar {
         height: 5px;
     }
-    
+
     nav .NavLinks ul::-webkit-scrollbar-thumb {
         border-radius: 10px;
         background-color: var(--main-color);
@@ -271,8 +276,8 @@
         top: 3px;
         right: -3px;
     }
-    
+
     .nav .NavLinks ul li .badge::after {
-       display: none;
+        display: none;
     }
 }

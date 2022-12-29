@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
-import FavoritesContext from '../global/Store';
-
-import MoviesCards from '../global/MoviesCards';
-import classes from './styles/Style.module.css';
-
+import FavoritesContext from '../store/Store';
+import MoviesCards from '../components/global/MoviesCards';
+import classes from '../styles/PagesStyles.module.css';
 
 
-const FavoritesMovies = ()=> {
+
+const FavoritesMovies = () => {
     const favoriteCtx = useContext(FavoritesContext);
 
     return (
@@ -16,13 +15,13 @@ const FavoritesMovies = ()=> {
             <section className={classes.Favorites}>
                 {favoriteCtx.Favorites.length === 0 ? <>
                     <p className={classes.Message_NotFound}>add somthing to the favorites</p>
-                </> : 
+                </> :
                     favoriteCtx.Favorites.map((movie, index) => (
                         <MoviesCards movies={movie} key={index} />
                     ))
                 }
             </section>
-        </div>    
+        </div>
     )
 };
 

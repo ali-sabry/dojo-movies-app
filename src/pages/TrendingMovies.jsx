@@ -1,17 +1,14 @@
 import React from 'react';
-
-import classes from './styles/Style.module.css';
-
-import useFetchingApi from '../global/FetchingApi';
-
-import MoviesCards from '../global/MoviesCards';
+import classes from '../styles/PagesStyles.module.css';
+import useFetchingApi from '../components/customHook/FetchingApi';
+import MoviesCards from '../components/global/MoviesCards';
 
 
-const TrendingMovies = ()=> {
+const TrendingMovies = () => {
     const url = 'https://api.themoviedb.org/3/trending/movie/week';
-    const {IsLoading, IsError, MessageError, MoviesData} = useFetchingApi(url);
-      
-    if(IsLoading) {
+    const { IsLoading, IsError, MessageError, MoviesData } = useFetchingApi(url);
+
+    if (IsLoading) {
         return (
             <div>
                 <p className={classes.Message}>Loading.....</p>
@@ -19,7 +16,7 @@ const TrendingMovies = ()=> {
         )
     }
 
-    if(IsError) {
+    if (IsError) {
         return (
             <>
                 <p className={classes.Message}>{MessageError}</p>
@@ -30,17 +27,17 @@ const TrendingMovies = ()=> {
     function otherDetails(movie) {
         return (
             <>
-            released : <span>{movie.release_date}</span>
+                released : <span>{movie.release_date}</span>
             </>
-        ) 
+        )
     }
 
     return (
         <div className={classes.MainMarginTop}>
             <h1 className={classes.Home_Heading}>trending</h1>
             <section className={classes.Trending_Movies}>
-                {MoviesData.map( (movie, index) => (
-                    <MoviesCards movies={movie} other={otherDetails(movie)} voted='false' key={index}/>
+                {MoviesData.map((movie, index) => (
+                    <MoviesCards movies={movie} other={otherDetails(movie)} voted='false' key={index} />
                 ))}
             </section>
         </div>

@@ -7,46 +7,38 @@
 }
 
 .nav .NavbarSearch {
-    display: grid;
-    grid-template-areas: 'brand input input input input input input button button';
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .nav .NavbarSearch .Brand {
-    grid-area: brand;
     text-align: center;
     color: var(--white);
-    display: flex;
 }
 
-.nav .NavbarSearch .Brand h1 {
-    margin: 0;
-    letter-spacing: 0.23em;
-    font-family: cursive;
-}
-
-.nav .NavbarSearch .Brand h1 a {
+.nav .NavbarSearch .Brand a {
     text-decoration: none;
     color: var(--white);
     display: flex;
     align-items: center;
     transition: color .3s ease;
     font-size: 25px;
-
 }
 
-.nav .NavbarSearch .Brand h1 a:hover {
+.nav .NavbarSearch .Brand a:hover {
     color: var(--primary-color)
 }
 
+.nav .NavbarSearch .SearchContainer {
+    display: flex;
+}
+
 .NavbarSearch .input {
-    grid-area: input;
     outline: none;
     padding: 7px 10px;
     text-indent: 10px;
-    font-weight: bold;
-    font-size: 22px;
     background-color: transparent;
     border: 2px solid rgb(151, 147, 147);
     border-radius: 7px;
@@ -54,38 +46,33 @@
     accent-color: var(--white);
     width: 95%;
     box-shadow: 0 0 40px rgba(0, 0, 0, .1);
+    margin-right: 10px;
 }
 
 .NavbarSearch .input:focus {
     border-color: var(--main-color);
 }
 
-.NavbarSearch .input::placeholder {
+/* .NavbarSearch .input::placeholder {
     color: var(--white);
     letter-spacing: 2px;
     opacity: 1;
-    font-weight: 500;
     font-family: 'Nunito', sans-serif;
 }
 
 .NavbarSearch .input:focus::placeholder {
     opacity: 0;
-}
+} */
 
 .NavbarSearch .SearchBtn {
-    grid-area: button;
-    display: inline-block;
+    display: block;
     text-align: center;
-    text-decoration: none;
     cursor: pointer;
-    padding: 7px 15px;
+    padding: 10px 20px;
     background-color: var(--main-color);
     color: var(--white);
-    font-weight: bold;
     font-size: 25px;
-    letter-spacing: 2px;
     border-radius: 7px;
-    text-transform: capitalize;
     transition: .3s ease;
 }
 
@@ -192,37 +179,32 @@
 
     .nav .NavbarSearch {
         display: flex;
-        justify-content: space-between;
+        align-items: center;
     }
 
-    .nav .NavbarSearch .Brand {
-        display: block;
-        width: 25%;
-    }
-
-    .nav .NavbarSearch .Brand a {
-        display: inline-block !important;
-        font-size: 20px !important;
+    .nav .NavbarSearch .Brand svg {
+        font-size: 35px;
     }
 
     .nav .NavbarSearch .input {
-        width: 80%;
-        margin: 7px 0;
+        margin: 0;
         padding: 0;
     }
 
+    .nav .NavbarSearch .Brand a span {
+        display: none !important;
+    }
+
     .nav .NavbarSearch .SearchBtn {
-        width: 20%;
-        padding: 4px 7px;
-        margin-left: 6px;
-        font-size: 16px;
+        padding: 5px 20px;
+        margin-left: 5px;
     }
 
-    .nav .NavbarSearch .input::placeholder {
-        font-size: 10px;
-        line-height: 100%;
+    .nav .NavbarSearch .SearchBtn svg {
+        font-size: 20px;
     }
 
+    /* Bottom Navabar On Mobile Screen */
     .nav .NavLinks {
         position: fixed;
         bottom: -3px;
@@ -244,6 +226,8 @@
         width: 70%;
         margin: auto;
         padding-bottom: 10px;
+        box-shadow: inset -2px 0 5px 0 rgb(255 255 255 / 30%);
+        border-radius: 3px;
     }
 
     nav .NavLinks ul::-webkit-scrollbar {

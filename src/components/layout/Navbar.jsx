@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 import classes from '../../styles/Navbar.module.css';
 
 import { FaHome, FaAppStore, FaAccusoft, FaUps, FaAcquisitionsIncorporated, FaHeart, FaMoon } from 'react-icons/fa';
-import { AiOutlineFundProjectionScreen } from 'react-icons/ai';
+import { AiOutlineFundProjectionScreen, AiOutlineSearch } from 'react-icons/ai';
 import { MdLightMode } from 'react-icons/md';
 
 
@@ -77,23 +77,23 @@ const Navbar = () => {
             </div>
             <div className={classes.NavbarSearch}>
                 <div className={classes.Brand}>
-                    <h1>
-                        <NavLink to='/'>
-                            dojo<AiOutlineFundProjectionScreen />
-                        </NavLink>
-                    </h1>
+                    <NavLink to='/'>
+                        <span>dojo</span><AiOutlineFundProjectionScreen />
+                    </NavLink>
                 </div>
-                <input
-                    type='search'
-                    placeholder='Type Your Movie Name'
-                    className={classes.input}
-                    id='input'
-                    onKeyUp={(e) => e.code === 'Enter' ? (document.getElementById('SearchBtn').click()) : false}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                <NavLink to={`/Searched/${encodeURI(SearchTerm)}`}
-                    className={classes.SearchBtn} id='SearchBtn'
-                    onClick={(e) => (SearchTerm === undefined || SearchTerm === '') ? (e.preventDefault()) : false}>search</NavLink>
+                <div className={classes.SearchContainer}>
+                    <input
+                        type='search'
+                        placeholder='Type Your Movie Name'
+                        className={classes.input}
+                        id='input'
+                        onKeyUp={(e) => e.code === 'Enter' ? (document.getElementById('SearchBtn').click()) : false}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                    <NavLink to={`/Searched/${encodeURI(SearchTerm)}`}
+                        className={classes.SearchBtn} id='SearchBtn'
+                        onClick={(e) => (SearchTerm === undefined || SearchTerm === '') ? (e.preventDefault()) : false}><AiOutlineSearch /></NavLink>
+                </div>
             </div>
         </nav>
     )

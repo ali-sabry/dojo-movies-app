@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 import classes from "./styles/PagesStyles.module.css";
 
@@ -12,7 +12,7 @@ import UpcomingMovies from "./pages/UpcomingMovies";
 import TopratedMovies from "./pages/TopratedMovies";
 import TrendingMovies from "./pages/TrendingMovies";
 import FavoritesMovies from "./pages/FavoritesMovies";
-import NotFound from "./pages/404.jsx";
+// import NotFound from "./pages/404.jsx";
 
 import Details from "./components/global/TargetMovieDetails";
 import SearchMovies from "./components/global/SearchMovies";
@@ -50,7 +50,8 @@ const App = () => {
           <Route path="/Favorites" element={<FavoritesMovies />}></Route>
           <Route path="/Searched/:name" element={<SearchMovies />}></Route>
           <Route path="/Details/:id" element={<Details />}></Route>
-          <Route path="*" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/" />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </section>
       <Footer />

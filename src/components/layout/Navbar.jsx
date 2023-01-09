@@ -11,7 +11,7 @@ import { MdLightMode } from 'react-icons/md';
 
 
 const Navbar = () => {
-    const [SearchTerm, setSearchTerm] = useState();
+    const [SearchValue, setSearchValue] = useState();
     const favoriteCtx = useContext(FavoritesContext);
     const [{ IsDark }, toggleTheme] = useContext(ThemeAppContext);
 
@@ -88,11 +88,11 @@ const Navbar = () => {
                         className={classes.input}
                         id='input'
                         onKeyUp={(e) => e.code === 'Enter' ? (document.getElementById('SearchBtn').click()) : false}
-                        onChange={(e) => setSearchTerm(e.target.value)}
+                        onChange={(e) => setSearchValue(e.target.value)}
                     />
-                    <NavLink to={`/Searched/${encodeURI(SearchTerm)}`}
+                    <NavLink to={`/Searched/${encodeURI(SearchValue)}`}
                         className={classes.SearchBtn} id='SearchBtn'
-                        onClick={(e) => (SearchTerm === undefined || SearchTerm === '') ? (e.preventDefault()) : false}><AiOutlineSearch /></NavLink>
+                        onClick={(e) => (SearchValue === undefined || SearchValue === '') ? (e.preventDefault()) : false}><AiOutlineSearch /></NavLink>
                 </div>
             </div>
         </nav>

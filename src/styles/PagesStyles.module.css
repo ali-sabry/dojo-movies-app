@@ -15,6 +15,11 @@
     grid-template-columns: repeat(auto-fill, minmax(244px, 1fr));
     gap: 20px;
     padding-bottom: 50px;
+    overflow: hidden;
+}
+
+.Target_Search_Movies {
+    padding-top: 20px;
 }
 
 .Nowplaying_Movies {
@@ -140,5 +145,9 @@
     .Message {
         margin-top: 150px !important;
 
+    }
+
+    .MainMarginTop {
+        margin-top: 15px;
     }
 }

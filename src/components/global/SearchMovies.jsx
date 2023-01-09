@@ -62,9 +62,10 @@ const SearchMovies = () => {
 
     return (
         <section className={classes.Target_Search_Movies}>
-            {Details.map((movie, index) => (
-                <MoviesCards movies={movie} other={otherDetails(movie)} voted='false' key={index} />
-            ))}
+            {Details.map((movie, index) => {
+                if (index === 0) return <h1 key={index} className={classes.Home_Heading}>your search result</h1>
+                return <MoviesCards movies={movie} other={otherDetails(movie)} voted='false' key={movie.title} />
+            })}
             {Details.length < 1 ? <>
                 <h1 className={classes.Message_NotFound}>movies not found</h1>
             </> : false}

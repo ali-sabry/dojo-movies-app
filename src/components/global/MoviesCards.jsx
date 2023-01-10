@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import classes from '../../styles/MoviesCards.module.css';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { GrFavorite } from 'react-icons/gr';
 import { ThemeAppContext } from '../../theme/Theme';
 import FavoritesContext from '../../store/Store';
-
 
 
 const MoviesCards = ({ movies, voted = 'true', other }) => {
@@ -13,6 +12,7 @@ const MoviesCards = ({ movies, voted = 'true', other }) => {
     const favoritesCtx = useContext(FavoritesContext);
     const DarkStatus = useContext(ThemeAppContext)
     const ItemIsFavorite = favoritesCtx.ItemIsFavorite(movies.id);
+    const { pathname } = useLocation();
 
     const HandlerFavStatus = () => {
         if (ItemIsFavorite) {
@@ -28,7 +28,7 @@ const MoviesCards = ({ movies, voted = 'true', other }) => {
     };
 
     return (
-        <div className={classes.movie_card} style={{ boxShadow: DarkStatus[0].IsDark ? '0 0 20px rgb(255 255 255 / 34%)' : '0 0 20px rgb(0 0 0 / 50%)' }}>
+        <div className={classes.movie_card} style={{ boxShadow: DarkStatus[0].IsDark ? '0 0 20px rgb(255 255 255 / 34%)' : '0 0 20px rgb(0 0 0 / 50%)', width: pathname === '/' ? '100%' : false }}>
             <div className={classes.movie_media}>
                 <div className={classes.overlay}>
                     <NavLink

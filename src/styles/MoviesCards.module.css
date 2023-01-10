@@ -4,6 +4,7 @@
     overflow: hidden;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    width: calc(100% / 3 - 20px);
 }
 
 .customCard {
@@ -153,6 +154,60 @@
     stroke: var(--main-color) !important;
     fill: var(--main-color);
 }
+
+@media screen and (max-width: 550px) {
+
+    .Popular_Movies .movie_card,
+    .Popular_Movies .customCard,
+    .Upcoming_Movies .movie_card,
+    .Upcoming_Movies .customCard,
+    .Toprated_Movies .movie_card,
+    .Toprated_Movies .customCard,
+    .Trending_Movies .movie_card,
+    .Trending_Movies .customCard,
+    .Favorites .movie_card,
+    .Favorites .customCard,
+    .Target_Search_Movies .movie_card,
+    .Target_Search_Movies .customCard {
+        width: 100%;
+    }
+}
+
+/* @media screen and (min-width: 551px) and (max-width: 770px) {
+
+    .Popular_Movies .movie_card,
+    .Popular_Movies .customCard,
+    .Upcoming_Movies .movie_card,
+    .Upcoming_Movies .customCard,
+    .Toprated_Movies .movie_card,
+    .Toprated_Movies .customCard,
+    .Trending_Movies .movie_card,
+    .Trending_Movies .customCard,
+    .Favorites .movie_card,
+    .Favorites .customCard,
+    .Target_Search_Movies .movie_card,
+    .Target_Search_Movies .customCard {
+        width: calc(100% / 2 - 20px);
+    }
+} */
+
+/* @media screen and (min-width: 770px) and (max-width: 1040px) {
+
+    .Popular_Movies .movie_card,
+    .Popular_Movies .customCard,
+    .Upcoming_Movies .movie_card,
+    .Upcoming_Movies .customCard,
+    .Toprated_Movies .movie_card,
+    .Toprated_Movies .customCard,
+    .Trending_Movies .movie_card,
+    .Trending_Movies .customCard,
+    .Favorites .movie_card,
+    .Favorites .customCard,
+    .Target_Search_Movies .movie_card,
+    .Target_Search_Movies .customCard {
+        width: calc(100% / 3 - 20px);
+    }
+} */
 
 
 @media screen and (max-width: 768px) {

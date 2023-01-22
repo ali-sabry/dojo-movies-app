@@ -50,7 +50,7 @@ const Home = () => {
                             530: {
                                 perPage: 1,
                             },
-                            630: {
+                            768: {
                                 perPage: 2,
                             }
                         }

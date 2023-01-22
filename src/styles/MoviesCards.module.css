@@ -214,4 +214,17 @@
     .movie_details {
         padding-left: 6px;
     }
+
+    .movie_card,
+    .customCard {
+        width: calc(100% / 2 - 20px);
+    }
+}
+
+@media screen and (max-width: 530px) {
+
+    .movie_card,
+    .customCard {
+        width: 100%;
+    }
 }

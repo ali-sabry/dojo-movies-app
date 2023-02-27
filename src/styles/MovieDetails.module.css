@@ -99,9 +99,11 @@
 }
 
 .Recommendations {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    overflow: hidden;
 }
 
 .Home_Heading {
@@ -134,16 +136,6 @@
     .Movie_Details {
         display: block;
 
-    }
-
-    .Recommendations {
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 20px;
-    }
-
-    .Recommendations div {
-        width: calc(50% - 20px);
     }
 
     .Details .Info {
